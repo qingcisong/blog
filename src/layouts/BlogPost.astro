@@ -1,82 +1,59 @@
 ---
-import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
-import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
+import { getFormattedDate } from '../utils';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, heroImage } = Astro.props;
 ---
 
-<html lang="en">
+<!doctype html>
+<html lang="en" class="overflow-x-hidden antialiased">
 	<head>
 		<BaseHead title={title} description={description} />
-		<style>
-			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
-			}
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
-			}
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
-			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
-			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
-			}
-			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
-			}
-			.last-updated-on {
-				font-style: italic;
-			}
-		</style>
 	</head>
 
-	<body>
+	<body class="text-slate-700">
 		<Header />
 		<main>
 			<article>
-				<div class="hero-image">
-					{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
-				</div>
-				<div class="prose">
-					<div class="title">
-						<div class="date">
-							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
-						</div>
-						<h1>{title}</h1>
-						<hr />
+				<!-- Back Link -->
+				<section class="px-4 py-8 md:px-6 md:py-10 lg:py-12">
+					<div class="mx-auto w-full max-w-3xl">
+						<a href="/" class="font-semibold tracking-tight text-slate-400">
+							← Back to articles
+						</a>
 					</div>
+				</section>
+
+				<!-- Title and Date -->
+				<section class="px-4 py-8 md:px-6 md:py-10 lg:py-12 pb-0">
+					<div class="mx-auto w-full max-w-3xl">
+						<h1 class="mb-3 text-3xl font-semibold tracking-tighter text-slate-800 md:text-4xl">
+							{title}
+						</h1>
+						<time class="font-serif italic tracking-tighter text-slate-500">
+							{getFormattedDate(pubDate)}
+						</time>
+					</div>
+				</section>
+
+				<!-- Hero Image -->
+				{heroImage && (
+					<section class="px-4 py-8 md:px-6 md:py-10 lg:py-12">
+						<div class="mx-auto w-full max-w-6xl">
+							<div class="bg-gray-100">
+								<img src={heroImage} alt={title} class="w-full" />
+							</div>
+						</div>
+					</section>
+				)}
+
+				<!-- Content -->
+				<div class="article-content">
 					<slot />
 				</div>
 			</article>
@@ -84,3 +61,172 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<Footer />
 	</body>
 </html>
+
+<style is:global>
+	/* Article content wrapper styling */
+	.article-content > * {
+		padding-left: 1rem;
+		padding-right: 1rem;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+
+	@media (min-width: 768px) {
+		.article-content > * {
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+			padding-top: 2.5rem;
+			padding-bottom: 2.5rem;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.article-content > * {
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+		}
+	}
+
+	.article-content p,
+	.article-content ul,
+	.article-content ol,
+	.article-content blockquote,
+	.article-content pre {
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		max-width: 48rem;
+		font-family: 'Libre Baskerville', Georgia, serif;
+		line-height: 1.625;
+	}
+
+	@media (min-width: 768px) {
+		.article-content p,
+		.article-content ul,
+		.article-content ol,
+		.article-content blockquote {
+			font-size: 1.25rem;
+			line-height: 1.625;
+		}
+	}
+
+	.article-content p {
+		margin-bottom: 1.75rem;
+	}
+
+	.article-content p:last-child {
+		margin-bottom: 0;
+	}
+
+	.article-content a {
+		text-decoration: underline;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 2px;
+	}
+
+	.article-content blockquote {
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		max-width: 64rem;
+		font-family: 'Libre Baskerville', Georgia, serif;
+		font-size: 1.875rem;
+		font-style: italic;
+		line-height: 1.625;
+	}
+
+	.article-content h2,
+	.article-content h3,
+	.article-content h4 {
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		max-width: 48rem;
+		font-family: 'Inter', sans-serif;
+		font-weight: 600;
+		color: rgb(30 41 59);
+	}
+
+	.article-content h2 {
+		font-size: 1.875rem;
+		margin-bottom: 1rem;
+	}
+
+	.article-content h3 {
+		font-size: 1.5rem;
+		margin-bottom: 0.75rem;
+	}
+
+	.article-content h4 {
+		font-size: 1.25rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.article-content ul,
+	.article-content ol {
+		margin-bottom: 1.75rem;
+		padding-left: 1.5rem;
+	}
+
+	.article-content li {
+		margin-bottom: 0.5rem;
+	}
+
+	.article-content pre {
+		background-color: rgb(241 245 249);
+		padding: 1rem;
+		border-radius: 0.5rem;
+		margin-bottom: 1.75rem;
+		overflow-x: auto;
+	}
+
+	.article-content code {
+		background-color: rgb(241 245 249);
+		padding: 0.25rem 0.5rem;
+		border-radius: 0.25rem;
+		font-size: 0.875rem;
+		font-family: monospace;
+	}
+
+	.article-content pre code {
+		background-color: transparent;
+		padding: 0;
+	}
+
+	.article-content hr {
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		max-width: 48rem;
+		border-color: rgb(203 213 225);
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	/* Image sections */
+	.article-content img {
+		width: 100%;
+	}
+
+	/* Image wrapper for full-width images */
+	.article-content > p:has(img) {
+		max-width: 96rem;
+		padding: 1rem;
+	}
+
+	@media (min-width: 768px) {
+		.article-content > p:has(img) {
+			padding: 1.5rem;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.article-content > p:has(img) {
+			padding: 2.5rem;
+		}
+	}
+
+	.article-content > p:has(img) img {
+		background-color: rgb(243 244 246);
+	}
+</style>

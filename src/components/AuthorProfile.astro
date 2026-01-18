@@ -1,0 +1,19 @@
+---
+import { AUTHOR_NAME, AUTHOR_BIO } from '../consts';
+---
+
+<section class="px-4">
+	<div class="mx-auto grid max-w-lg grid-cols-1 justify-items-center gap-8">
+		<div class="relative h-40 w-40 overflow-hidden rounded-full bg-slate-300">
+			<img
+				src="/profile.jpg"
+				alt={AUTHOR_NAME}
+				class="object-cover"
+			/>
+		</div>
+		<div class="grid grid-cols-1 gap-2 text-center">
+			<h1 class="font-sans font-semibold tracking-tighter text-slate-800 text-3xl md:text-4xl">{AUTHOR_NAME}</h1>
+			<p class="font-serif text-2xl italic leading-normal tracking-tight text-slate-500">{AUTHOR_BIO}</p>
+		</div>
+	</div>
+</section>
