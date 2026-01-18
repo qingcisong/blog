@@ -1,8 +1,8 @@
 ---
-title: 'Perilous yoga'
-description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...'
-pubDate: 'Jan 06 2022'
-heroImage: '/yoga.jpg'
+title: i am Qingci
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+pubDate: Jan 06 2022
+heroImage: /yoga.jpg
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
