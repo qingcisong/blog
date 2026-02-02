@@ -20,7 +20,7 @@ There are 3 major areas collaborating:
 
 **For understanding**: This is the part where you decide the structure and templates of the page. This includes defining where is the title, the contents. We can see the HTML as bricks of building software.
 
-![Code example showing header pointing to the title section of a website](/blog-placeholder-1.jpg)
+![Code example showing header pointing to the title section of a website](/yoga.jpg)
 
 ### CSS
 
