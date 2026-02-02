@@ -8,6 +8,7 @@
    3. SSR, CSR, SSG
    4. domain + DNS
    5. URL construction
+   6. astro里面的markdown 的render process
 3. explore front matter
 
 vs code 写代码----> Github 存储（1 repo存代码 推送通过action CICD 到2 pages）----> squarespace
