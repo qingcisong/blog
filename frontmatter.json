@@ -2,18 +2,30 @@
   "$schema": "https://frontmatter.codes/frontmatter.schema.json",
   "frontMatter.framework.id": "astro",
   "frontMatter.preview.host": "http://localhost:4321",
-  "frontMatter.content.publicFolder": "public",
+  "frontMatter.content.publicFolder": {
+    "path": "public",
+    "relative": true
+  },
+  "frontMatter.media.defaultFolder": "public",
   "frontMatter.content.pageFolders": [
     {
       "title": "blog",
-      "path": "[[workspace]]/src/content/blog"
+      "path": "[[workspace]]/src/content/blog",
+      "contentTypes": ["default"]
     }
   ],
+  "frontMatter.dashboard.openOnStart": true,
+  "frontMatter.content.draftField": {
+    "name": "draft",
+    "type": "boolean"
+  },
+  "frontMatter.preview.pathName": "/blog",
+  "frontMatter.framework.startCommand": "npm run dev",
   "frontMatter.taxonomy.contentTypes": [
     {
       "name": "default",
       "pageBundle": false,
-      "previewPath": "'blog'",
+      "previewPath": "blog",
       "filePrefix": null,
       "clearEmpty": true,
       "fields": [
@@ -40,6 +52,11 @@
           "name": "heroImage",
           "type": "image",
           "isPreviewImage": true
+        },
+        {
+          "title": "Draft",
+          "name": "draft",
+          "type": "draft"
         }
       ]
     }
