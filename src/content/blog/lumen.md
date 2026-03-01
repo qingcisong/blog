@@ -67,7 +67,7 @@ Most productivity tools treat sleep as leftover time. Lumen treats it as structu
 
 Sleep is not something to fit around tasks. It is the axis around which tasks rotate. By integrating Apple Watch sleep data, Lumen understands your average sleep duration, irregular patterns, and recovery needs — then builds a schedule that respects biological reality.
 
-## The Lumen Way
+## The Lumen Lifestyle
 
 Lumen is not about doing more. It is about seeing clearly, choosing consciously, and moving steadily.
 
