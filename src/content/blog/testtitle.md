@@ -1,5 +1,6 @@
 ---
 title: testtitle
+description: 'Understanding the three core layers of web development: HTML for structure, CSS for style, and JavaScript for interaction.'
 pubDate: 2026-02-02T04:08:00.372Z
 draft: true
 ---

@@ -67,23 +67,23 @@ const { title, description, pubDate, heroImage } = Astro.props;
 	.article-content > * {
 		padding-left: 1rem;
 		padding-right: 1rem;
-		padding-top: 2rem;
-		padding-bottom: 2rem;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
 	}
 
 	@media (min-width: 768px) {
 		.article-content > * {
 			padding-left: 1.5rem;
 			padding-right: 1.5rem;
-			padding-top: 2.5rem;
-			padding-bottom: 2.5rem;
+			padding-top: 0.75rem;
+			padding-bottom: 0.75rem;
 		}
 	}
 
 	@media (min-width: 1024px) {
 		.article-content > * {
-			padding-top: 3rem;
-			padding-bottom: 3rem;
+			padding-top: 1rem;
+			padding-bottom: 1rem;
 		}
 	}
 
@@ -111,7 +111,7 @@ const { title, description, pubDate, heroImage } = Astro.props;
 	}
 
 	.article-content p {
-		margin-bottom: 1.75rem;
+		margin-bottom: 0.5rem;
 	}
 
 	.article-content p:last-child {
@@ -168,8 +168,18 @@ const { title, description, pubDate, heroImage } = Astro.props;
 		padding-left: 1.5rem;
 	}
 
+	.article-content ul {
+		list-style-type: disc;
+		list-style-position: inside;
+	}
+
+	.article-content ol {
+		list-style-type: decimal;
+		list-style-position: inside;
+	}
+
 	.article-content li {
-		margin-bottom: 0.5rem;
+		margin-bottom: 0.25rem;
 	}
 
 	.article-content pre {

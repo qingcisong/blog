@@ -2,13 +2,11 @@
 title: 'How Websites Work: The Journey from Click to Display'
 description: 'Understanding the five-stage process that happens between clicking a link and seeing a webpage: source, storage, render, delivery, and presentation.'
 pubDate: 'Apr 12 2022'
-heroImage: '/hiking.jpg'
 ---
 
 After I clicked on a link, the website almost instantly appeared on my screen. However, within this instant, a lot of things had happened.
 
-*[Image placeholder: First second - a person clicks on a website. Middle - chaos of things happening. Second second - website opens]*
-
+![A person clicks a website, chaos happens, then the website opens](/BB0-1.jpg)
 > **Note**: A web page is not static like a file; rather, it is more like real-time data manipulation.
 
 ## Understanding the Webpage Path
@@ -19,9 +17,9 @@ Here is the chain of the stages:
 
 **Source → Storage → Render → Deliver → Presentation**
 
-*[Image placeholder: Simple diagram showing the flow from Source to Presentation with a splash effect (like diving into water)]*
-
 Let's dive in!
+
+![splash-effect](/BB0-2.jpg)
 
 ### 1. Source (Data & UI Template)
 
