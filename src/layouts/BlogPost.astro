@@ -220,20 +220,7 @@ const { title, description, pubDate, heroImage } = Astro.props;
 
 	/* Image wrapper for full-width images */
 	.article-content > p:has(img) {
-		max-width: 96rem;
-		padding: 1rem;
-	}
-
-	@media (min-width: 768px) {
-		.article-content > p:has(img) {
-			padding: 1.5rem;
-		}
-	}
-
-	@media (min-width: 1024px) {
-		.article-content > p:has(img) {
-			padding: 2.5rem;
-		}
+		max-width: 48rem;
 	}
 
 	.article-content > p:has(img) img {

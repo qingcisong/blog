@@ -1,0 +1,88 @@
+<svg width="100%" viewBox="0 0 680 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="white"/>
+  <!-- =========== 顶部: KMP + Kotlin Multiplatform 三个 =========== -->
+  <text x="120" y="35" text-anchor="middle" fill="#4A90D9" style="font-family: var(--font-sans); font-size: 12px; font-weight: 500;;fill:rgb(74, 144, 217);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:12px;font-weight:500;text-anchor:middle;dominant-baseline:auto">KMP</text>
+  <text x="120" y="52" text-anchor="middle" fill="#4A90D9" style="font-family: var(--font-sans); font-size: 10px;;fill:rgb(74, 144, 217);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:10px;font-weight:400;text-anchor:middle;dominant-baseline:auto">Kotlin Multiplatform</text>
+  
+  <text x="340" y="35" text-anchor="middle" fill="#4A90D9" style="font-family: var(--font-sans); font-size: 12px; font-weight: 500;;fill:rgb(74, 144, 217);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:12px;font-weight:500;text-anchor:middle;dominant-baseline:auto">KMP</text>
+  <text x="340" y="52" text-anchor="middle" fill="#4A90D9" style="font-family: var(--font-sans); font-size: 10px;;fill:rgb(74, 144, 217);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:10px;font-weight:400;text-anchor:middle;dominant-baseline:auto">Kotlin Multiplatform</text>
+  
+  <text x="560" y="35" text-anchor="middle" fill="#4A90D9" style="font-family: var(--font-sans); font-size: 12px; font-weight: 500;;fill:rgb(74, 144, 217);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:12px;font-weight:500;text-anchor:middle;dominant-baseline:auto">KMP</text>
+  <text x="560" y="52" text-anchor="middle" fill="#4A90D9" style="font-family: var(--font-sans); font-size: 10px;;fill:rgb(74, 144, 217);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:10px;font-weight:400;text-anchor:middle;dominant-baseline:auto">Kotlin Multiplatform</text>
+  
+  <!-- =========== Mobile 额外一层: React Native =========== -->
+  <text x="340" y="85" text-anchor="middle" fill="#4A90D9" style="font-family: var(--font-sans); font-size: 12px; font-weight: 500;;fill:rgb(74, 144, 217);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:12px;font-weight:500;text-anchor:middle;dominant-baseline:auto">React Native</text>
+  
+  <!-- =========== 三大平台标题 =========== -->
+  <text x="120" y="120" text-anchor="middle" fill="var(--color-text-primary)" style="font-family: var(--font-sans); font-size: 14px; font-weight: 500;;fill:rgb(20, 20, 19);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:auto">Desktop</text>
+  <text x="340" y="120" text-anchor="middle" fill="var(--color-text-primary)" style="font-family: var(--font-sans); font-size: 14px; font-weight: 500;;fill:rgb(20, 20, 19);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:auto">Mobile</text>
+  <text x="560" y="120" text-anchor="middle" fill="var(--color-text-primary)" style="font-family: var(--font-sans); font-size: 14px; font-weight: 500;;fill:rgb(20, 20, 19);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:14px;font-weight:500;text-anchor:middle;dominant-baseline:auto">Web App</text>
+  
+  <!-- 竖线分隔 -->
+  <line x1="230" y1="110" x2="230" y2="420" stroke="var(--color-border-tertiary)" stroke-width="1" stroke-dasharray="4,4" style="fill:rgb(0, 0, 0);stroke:rgba(31, 30, 29, 0.15);color:rgb(0, 0, 0);stroke-width:1px;stroke-dasharray:4px, 4px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <line x1="450" y1="110" x2="450" y2="420" stroke="var(--color-border-tertiary)" stroke-width="1" stroke-dasharray="4,4" style="fill:rgb(0, 0, 0);stroke:rgba(31, 30, 29, 0.15);color:rgb(0, 0, 0);stroke-width:1px;stroke-dasharray:4px, 4px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  
+  <!-- =========== 黄色层: 平台例子 =========== -->
+  <text x="40" y="170" text-anchor="start" fill="var(--color-text-secondary)" style="font-family: var(--font-sans); font-size: 11px;;fill:rgb(61, 61, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:11px;font-weight:400;text-anchor:start;dominant-baseline:auto">Examples</text>
+  
+  <!-- Desktop 例子 -->
+  <text x="80" y="195" text-anchor="middle" fill="#F9A825" style="font-family: var(--font-sans); font-size: 12px; font-weight: 500;;fill:rgb(249, 168, 37);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:12px;font-weight:500;text-anchor:middle;dominant-baseline:auto">Windows</text>
+  <text x="120" y="215" text-anchor="middle" fill="#F9A825" style="font-family: var(--font-sans); font-size: 12px; font-weight: 500;;fill:rgb(249, 168, 37);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:12px;font-weight:500;text-anchor:middle;dominant-baseline:auto">macOS</text>
+  <text x="160" y="195" text-anchor="middle" fill="#F9A825" style="font-family: var(--font-sans); font-size: 12px; font-weight: 500;;fill:rgb(249, 168, 37);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:12px;font-weight:500;text-anchor:middle;dominant-baseline:auto">Linux</text>
+  
+  <!-- Mobile 例子 -->
+  <text x="300" y="200" text-anchor="middle" fill="#F9A825" style="font-family: var(--font-sans); font-size: 12px; font-weight: 500;;fill:rgb(249, 168, 37);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:12px;font-weight:500;text-anchor:middle;dominant-baseline:auto">Android</text>
+  <text x="380" y="200" text-anchor="middle" fill="#F9A825" style="font-family: var(--font-sans); font-size: 12px; font-weight: 500;;fill:rgb(249, 168, 37);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:12px;font-weight:500;text-anchor:middle;dominant-baseline:auto">iOS</text>
+  
+  <!-- Web App 例子 -->
+  <text x="510" y="200" text-anchor="middle" fill="#F9A825" style="font-family: var(--font-sans); font-size: 12px; font-weight: 500;;fill:rgb(249, 168, 37);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:12px;font-weight:500;text-anchor:middle;dominant-baseline:auto">Chrome</text>
+  <text x="600" y="200" text-anchor="middle" fill="#F9A825" style="font-family: var(--font-sans); font-size: 12px; font-weight: 500;;fill:rgb(249, 168, 37);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:12px;font-weight:500;text-anchor:middle;dominant-baseline:auto">Safari</text>
+  
+  <!-- =========== 蓝色层: 语言 =========== -->
+  <text x="40" y="265" text-anchor="start" fill="var(--color-text-secondary)" style="font-family: var(--font-sans); font-size: 11px;;fill:rgb(61, 61, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:11px;font-weight:400;text-anchor:start;dominant-baseline:auto">Languages</text>
+  
+  <!-- Desktop 语言 -->
+  <text x="80" y="290" text-anchor="middle" fill="#4A90D9" style="font-family: var(--font-sans); font-size: 12px; font-weight: 500;;fill:rgb(74, 144, 217);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:12px;font-weight:500;text-anchor:middle;dominant-baseline:auto">Executable</text>
+  <text x="120" y="310" text-anchor="middle" fill="#4A90D9" style="font-family: var(--font-sans); font-size: 12px; font-weight: 500;;fill:rgb(74, 144, 217);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:12px;font-weight:500;text-anchor:middle;dominant-baseline:auto">Swift</text>
+  <text x="160" y="290" text-anchor="middle" fill="#4A90D9" style="font-family: var(--font-sans); font-size: 12px; font-weight: 500;;fill:rgb(74, 144, 217);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:12px;font-weight:500;text-anchor:middle;dominant-baseline:auto">Rust</text>
+  
+  <!-- Mobile 语言 -->
+  <text x="300" y="295" text-anchor="middle" fill="#4A90D9" style="font-family: var(--font-sans); font-size: 12px; font-weight: 500;;fill:rgb(74, 144, 217);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:12px;font-weight:500;text-anchor:middle;dominant-baseline:auto">Kotlin</text>
+  <text x="380" y="295" text-anchor="middle" fill="#4A90D9" style="font-family: var(--font-sans); font-size: 12px; font-weight: 500;;fill:rgb(74, 144, 217);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:12px;font-weight:500;text-anchor:middle;dominant-baseline:auto">Swift</text>
+  
+  <!-- Web App 语言 -->
+  <text x="560" y="295" text-anchor="middle" fill="#4A90D9" style="font-family: var(--font-sans); font-size: 12px; font-weight: 500;;fill:rgb(74, 144, 217);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:12px;font-weight:500;text-anchor:middle;dominant-baseline:auto">JavaScript</text>
+  
+  <!-- =========== 红色层: 组件类型 =========== -->
+  <text x="40" y="360" text-anchor="start" fill="var(--color-text-secondary)" style="font-family: var(--font-sans); font-size: 11px;;fill:rgb(61, 61, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:11px;font-weight:400;text-anchor:start;dominant-baseline:auto">Components</text>
+  
+  <!-- Desktop 组件: P -->
+  <rect x="70" y="375" width="100" height="45" rx="6" fill="none" stroke="#E57373" stroke-width="2.5" style="fill:none;stroke:rgb(229, 115, 115);color:rgb(0, 0, 0);stroke-width:2.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <text x="120" y="395" text-anchor="middle" fill="#E57373" style="font-family: var(--font-sans); font-size: 13px; font-weight: 500;;fill:rgb(229, 115, 115);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:13px;font-weight:500;text-anchor:middle;dominant-baseline:auto">Page / List</text>
+  <text x="120" y="412" text-anchor="middle" fill="#E57373" style="font-family: var(--font-sans); font-size: 10px;;fill:rgb(229, 115, 115);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:10px;font-weight:400;text-anchor:middle;dominant-baseline:auto">Output 输出</text>
+  
+  <!-- Mobile 组件: M -->
+  <rect x="290" y="375" width="100" height="45" rx="6" fill="none" stroke="#E57373" stroke-width="2.5" style="fill:none;stroke:rgb(229, 115, 115);color:rgb(0, 0, 0);stroke-width:2.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <text x="340" y="395" text-anchor="middle" fill="#E57373" style="font-family: var(--font-sans); font-size: 13px; font-weight: 500;;fill:rgb(229, 115, 115);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:13px;font-weight:500;text-anchor:middle;dominant-baseline:auto">Table</text>
+  <text x="340" y="412" text-anchor="middle" fill="#E57373" style="font-family: var(--font-sans); font-size: 10px;;fill:rgb(229, 115, 115);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:10px;font-weight:400;text-anchor:middle;dominant-baseline:auto">Database 数据库</text>
+  
+  <!-- Web App 组件: W -->
+  <rect x="510" y="375" width="100" height="45" rx="6" fill="none" stroke="#E57373" stroke-width="2.5" style="fill:none;stroke:rgb(229, 115, 115);color:rgb(0, 0, 0);stroke-width:2.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <text x="560" y="395" text-anchor="middle" fill="#E57373" style="font-family: var(--font-sans); font-size: 13px; font-weight: 500;;fill:rgb(229, 115, 115);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:13px;font-weight:500;text-anchor:middle;dominant-baseline:auto">Form</text>
+  <text x="560" y="412" text-anchor="middle" fill="#E57373" style="font-family: var(--font-sans); font-size: 10px;;fill:rgb(229, 115, 115);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:10px;font-weight:400;text-anchor:middle;dominant-baseline:auto">Input 输入</text>
+  
+  <!-- =========== 底部: APP + Flutter =========== -->
+  <rect x="240" y="465" width="80" height="38" rx="6" fill="none" stroke="#E57373" stroke-width="2.5" style="fill:none;stroke:rgb(229, 115, 115);color:rgb(0, 0, 0);stroke-width:2.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <text x="280" y="490" text-anchor="middle" fill="#E57373" style="font-family: var(--font-sans); font-size: 13px; font-weight: 500;;fill:rgb(229, 115, 115);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:13px;font-weight:500;text-anchor:middle;dominant-baseline:auto">App</text>
+  
+  <text x="400" y="490" text-anchor="middle" fill="#4A90D9" style="font-family: var(--font-sans); font-size: 13px; font-weight: 500;;fill:rgb(74, 144, 217);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:13px;font-weight:500;text-anchor:middle;dominant-baseline:auto">Flutter</text>
+  
+  <!-- 连接 APP → Flutter -->
+  <line x1="320" y1="484" x2="365" y2="484" stroke="#F9A825" stroke-width="2" marker-end="url(#arrow)" style="fill:rgb(0, 0, 0);stroke:rgb(249, 168, 37);color:rgb(0, 0, 0);stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  
+</svg>
