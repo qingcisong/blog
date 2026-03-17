@@ -1,6 +1,6 @@
 ---
-title: lumen milestone#1 - Web Architecture Design
-description: 'From Task Management to Energy Management'
+title: lumen milestone#1 - From Needs to Architecture
+description: 'Architecture is not chosen — it is derived, by working backward from user needs to data. This also reshapes the app design from task to energy management'
 pubDate: 2026-03-17T02:58:20.486Z
 draft: true
 ---
@@ -74,11 +74,9 @@ The goal was never just to collect sleep data for its own sake.
 
 The real goal was to help answer questions like:
 
-When is a person likely to feel tired?
-
-When are they most cognitively capable?
-
-How long can focused work realistically last?
+- When is a person likely to feel tired?
+- When are they most cognitively capable?
+- How long can focused work realistically last?
 
 Once I framed it that way, the discussion changed.
 
