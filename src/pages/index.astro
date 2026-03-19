@@ -4,12 +4,27 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import AuthorProfile from '../components/AuthorProfile.astro';
 import BlogCard from '../components/BlogCard.astro';
+import RiverMap from '../components/RiverMap.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
+import { zones } from '../data/riverNodes';
 
 const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
+// Build a lookup map: "/blog/<post-id>" → post
+const postsBySlug = Object.fromEntries(
+  posts.map(post => [`/blog/${post.id}`, post])
+);
+
+// Track which post IDs have been assigned to a zone
+const assignedSlugs = new Set(
+  zones.flatMap(zone => zone.articles.map(a => a.slug))
+);
+
+// Posts not belonging to any zone
+const unzonedPosts = posts.filter(post => !assignedSlugs.has(`/blog/${post.id}`));
 ---
 
 <!doctype html>
@@ -21,12 +36,102 @@ const posts = (await getCollection('blog')).sort(
 		<Header />
 		<main class="px-4 py-8 md:px-6 md:py-10 lg:py-12">
 			<div class="mx-auto w-full max-w-6xl">
-				<div class="grid grid-cols-1 gap-16">
-					<AuthorProfile />
-					{posts.map((post) => <BlogCard post={post} />)}
+				<AuthorProfile />
+
+				<div class="articles-layout">
+					<RiverMap />
+
+					<div class="articles-content">
+						{zones.map((zone) => {
+							const zoneArticles = zone.articles
+								.map(a => postsBySlug[a.slug])
+								.filter(Boolean);
+
+							if (zoneArticles.length === 0 && zone.status !== 'coming-soon') return null;
+
+							return (
+								<section id={`zone-${zone.id}`} class="zone-section">
+									<h2 class="zone-title">
+										<span
+											class="zone-badge"
+											style={`background: ${zone.color.bg}; color: ${zone.color.text}; border-color: ${zone.color.border};`}
+										>
+											{zone.number}
+										</span>
+										{zone.name}
+									</h2>
+
+									<div class="grid grid-cols-1 gap-16">
+										{zoneArticles.map(post => <BlogCard post={post} />)}
+									</div>
+
+									{zone.status === 'coming-soon' && (
+										<p class="coming-soon-text">More content coming soon...</p>
+									)}
+								</section>
+							);
+						})}
+
+						{unzonedPosts.length > 0 && (
+							<section class="zone-section">
+								<h2 class="zone-title" style="color: #5F5E5A;">Other</h2>
+								<div class="grid grid-cols-1 gap-16">
+									{unzonedPosts.map(post => <BlogCard post={post} />)}
+								</div>
+							</section>
+						)}
+					</div>
 				</div>
 			</div>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	.articles-layout {
+		display: flex;
+		gap: 60px;
+		margin-top: 2rem;
+		align-items: flex-start;
+	}
+
+	.articles-content {
+		flex: 1;
+		min-width: 0;
+	}
+
+	.zone-section {
+		margin-bottom: 4rem;
+	}
+
+	.zone-title {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		font-size: 1.1rem;
+		font-weight: 600;
+		margin-bottom: 1.5rem;
+		color: #1e293b;
+		letter-spacing: -0.01em;
+	}
+
+	.zone-badge {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 28px;
+		height: 28px;
+		border-radius: 50%;
+		font-size: 14px;
+		font-weight: 500;
+		border: 1.5px solid;
+		flex-shrink: 0;
+	}
+
+	.coming-soon-text {
+		color: #888;
+		font-style: italic;
+		margin-top: 0.5rem;
+	}
+</style>

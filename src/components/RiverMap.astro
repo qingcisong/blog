@@ -1,0 +1,240 @@
+---
+// RiverMap.astro
+// A visual navigation map showing the flow of knowledge from foundations to projects
+
+import { zones } from '../data/riverNodes';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<aside class:list={['river-map', className]}>
+  <svg viewBox="0 0 400 700" class="river-svg">
+
+    <!-- ========== MOUNTAINS ========== -->
+    <g class="mountains">
+      <path d="M120 140 L160 60 L200 140" />
+      <path d="M170 140 L210 70 L250 140" />
+      <path d="M220 140 L250 80 L280 140" style="opacity: 0.8" />
+      <path d="M260 140 L285 95 L310 140" style="opacity: 0.6" />
+    </g>
+
+    <!-- ========== HEADWATER STREAMS ========== -->
+    <g class="streams">
+      <path d="M175 130 Q180 160 200 190" />
+      <path d="M260 130 Q250 160 230 190" />
+    </g>
+
+    <!-- ========== MAIN RIVER ========== -->
+    <path class="river-main" d="M200 190
+         Q190 220 210 260
+         Q230 300 210 340
+         Q190 380 210 420
+         Q230 460 210 500
+         Q200 530 210 560" />
+
+    <!-- ========== DELTA BRANCHES ========== -->
+    <g class="delta">
+      <path d="M210 560 Q150 600 100 640" />
+      <path d="M210 560 Q180 610 160 660" />
+      <path d="M210 560 Q210 610 210 670" class="delta-main" />
+      <path d="M210 560 Q240 610 270 660" />
+      <path d="M210 560 Q270 600 320 640" />
+    </g>
+
+    <!-- ========== DELTA ISLANDS ========== -->
+    <g class="islands">
+      <ellipse cx="145" cy="655" rx="25" ry="8" />
+      <ellipse cx="250" cy="660" rx="30" ry="10" />
+    </g>
+
+    <!-- ========== ZONE MARKERS ========== -->
+    {zones.map((zone) => (
+      <g
+        class:list={['zone-marker', { 'coming-soon': zone.status === 'coming-soon' }]}
+        data-zone={zone.id}
+      >
+        <circle
+          cx="70"
+          cy={zone.number === 1 ? 165 : zone.number === 2 ? 380 : 590}
+          r="22"
+          style={`fill: ${zone.color.bg}; stroke: ${zone.color.border};`}
+        />
+        <text
+          x="70"
+          y={zone.number === 1 ? 170 : zone.number === 2 ? 385 : 595}
+          style={`fill: ${zone.color.text};`}
+          class="zone-number"
+        >
+          {zone.number}
+        </text>
+        <text
+          x="70"
+          y={zone.number === 1 ? 200 : zone.number === 2 ? 415 : 625}
+          class="zone-name"
+        >
+          {zone.name}
+        </text>
+        {zone.status === 'coming-soon' && (
+          <text
+            x="70"
+            y={zone.number === 1 ? 215 : zone.number === 2 ? 430 : 640}
+            class="zone-status"
+          >
+            (coming soon)
+          </text>
+        )}
+      </g>
+    ))}
+
+  </svg>
+</aside>
+
+<style>
+  .river-map {
+    position: sticky;
+    top: 2rem;
+    width: 280px;
+    flex-shrink: 0;
+    align-self: flex-start;
+  }
+
+  .river-svg {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Mountains */
+  .mountains path {
+    fill: none;
+    stroke: #888780;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: 0.6;
+  }
+
+  /* Streams */
+  .streams path {
+    fill: none;
+    stroke: #85B7EB;
+    stroke-width: 2;
+    stroke-linecap: round;
+    opacity: 0.5;
+  }
+
+  /* Main river */
+  .river-main {
+    fill: none;
+    stroke: #85B7EB;
+    stroke-width: 5;
+    stroke-linecap: round;
+    opacity: 0.7;
+  }
+
+  /* Delta */
+  .delta path {
+    fill: none;
+    stroke: #85B7EB;
+    stroke-width: 3;
+    stroke-linecap: round;
+    opacity: 0.5;
+  }
+
+  .delta .delta-main {
+    stroke-width: 4;
+    opacity: 0.6;
+  }
+
+  /* Islands */
+  .islands ellipse {
+    fill: #5F5E5A;
+    opacity: 0.3;
+  }
+
+  /* Zone markers */
+  .zone-marker {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+
+  .zone-marker circle {
+    stroke-width: 1.5;
+    transition: transform 0.15s ease;
+    transform-origin: center;
+  }
+
+  .zone-marker:hover circle {
+    transform: scale(1.1);
+  }
+
+  .zone-marker.coming-soon {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  .zone-marker.coming-soon:hover {
+    opacity: 0.6;
+  }
+
+  .zone-marker.coming-soon:hover circle {
+    transform: none;
+  }
+
+  .zone-number {
+    font-size: 14px;
+    font-weight: 500;
+    text-anchor: middle;
+    dominant-baseline: middle;
+  }
+
+  .zone-name {
+    font-size: 11px;
+    text-anchor: middle;
+    fill: var(--color-text-secondary, #5F5E5A);
+  }
+
+  .zone-status {
+    font-size: 10px;
+    text-anchor: middle;
+    fill: var(--color-text-tertiary, #888780);
+  }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .mountains path {
+      stroke: #B4B2A9;
+    }
+
+    .islands ellipse {
+      fill: #888780;
+    }
+  }
+
+  /* Hide on narrow screens */
+  @media (max-width: 1024px) {
+    .river-map {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  // Add click handlers for zone navigation
+  document.querySelectorAll('.zone-marker:not(.coming-soon)').forEach((marker) => {
+    marker.addEventListener('click', () => {
+      const zoneId = marker.getAttribute('data-zone');
+      const targetSection = document.getElementById(`zone-${zoneId}`);
+
+      if (targetSection) {
+        targetSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+</script>
