@@ -1,7 +1,7 @@
 ---
 title: "Understanding Rendering: SSR, CSR, and SSG"
 description: Exploring the different approaches to rendering web pages - server-side rendering, client-side rendering, and SSG - and how they impact user experience.
-pubDate: Jan 06 2022
+pubDate: Jan 06 2026
 heroImage: /yoga.jpg
 ---
 

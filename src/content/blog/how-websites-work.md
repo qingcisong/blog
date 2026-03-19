@@ -1,7 +1,7 @@
 ---
 title: 'How Websites Work: The Journey from Click to Display'
 description: 'Understanding the five-stage process that happens between clicking a link and seeing a webpage: source, storage, render, delivery, and presentation.'
-pubDate: 'Apr 12 2022'
+pubDate: 'Apr 12 2026'
 ---
 
 After I clicked on a link, the website almost instantly appeared on my screen. However, within this instant, a lot of things had happened.

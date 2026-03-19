@@ -2,7 +2,6 @@
 title: lumen milestone#1 - From Needs to Architecture
 description: 'Architecture is not chosen — it is derived, by working backward from user needs to data. This also reshapes the app design from task to energy management'
 pubDate: 2026-03-17T02:58:20.486Z
-draft: true
 ---
 ## Where the Journey Began
 
