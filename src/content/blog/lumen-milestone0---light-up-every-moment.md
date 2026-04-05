@@ -1,5 +1,5 @@
 ---
-title: Lumen - light up every moment
+title: 'Lumen: Light Up Every Moment'
 description: 'A design narrative on Lumen — a time management app built around one idea: make the invisible structure of your time visible.'
 pubDate: 2026-03-01T03:46:31.790Z
 draft: true

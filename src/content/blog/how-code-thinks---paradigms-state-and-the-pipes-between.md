@@ -1,5 +1,5 @@
 ---
-title: software
+title: 'How Code Thinks: Paradigms, State, and the Pipes Between'
 pubDate: 2026-03-29T00:25:08.080Z
 draft: true
 description: programming paradigms
